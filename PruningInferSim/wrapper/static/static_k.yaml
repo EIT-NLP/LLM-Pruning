@@ -1,0 +1,56 @@
+cache_type: base
+
+attention:
+  estimated_sparsity: -1
+  pruning_type: base
+  backend: tilelang
+  threshold: -1
+  enable_autotune: false
+
+self_attn:
+  estimated_sparsity: 0.5
+  
+  q_proj:
+    estimated_sparsity: 0.5
+    pruning_type: semi_structured
+    block_size: 4
+    backend: torch
+  
+  k_proj:
+    estimated_sparsity: 0.5
+    pruning_type: semi_structured
+    block_size: 4
+    backend: torch
+  
+  v_proj:
+    estimated_sparsity: 0.5
+    pruning_type: semi_structured
+    block_size: 4
+    backend: torch
+  
+  o_proj:
+    estimated_sparsity: 0.5
+    pruning_type: semi_structured
+    block_size: 4
+    backend: torch
+
+mlp:
+  estimated_sparsity: 0.5
+
+  up_proj:
+    estimated_sparsity: 0.5
+    pruning_type: semi_structured
+    block_size: 4
+    backend: torch
+  
+  gate_proj:
+    estimated_sparsity: 0.5
+    pruning_type: semi_structured
+    block_size: 4
+    backend: torch
+  
+  down_proj:
+    estimated_sparsity: 0.5
+    pruning_type: semi_structured
+    block_size: 4
+    backend: torch

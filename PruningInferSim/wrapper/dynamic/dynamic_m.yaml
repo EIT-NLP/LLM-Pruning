@@ -1,0 +1,97 @@
+cache_type: base
+
+approximator:
+  approximator_type: null
+  approximator_rank_size: 16
+
+layer:
+  estimated_sparsity: 0
+  pruning_type: null
+  backend: triton
+  prefill_impl: auto
+  decode_impl: auto
+
+  router:
+    router_type: bottleneck
+    router_rank_size: 16
+
+self_attn:
+  estimated_sparsity: -1
+  pruning_type: m
+  backend: triton
+  prefill_impl: auto
+  decode_impl: auto
+  enable_autotune: false
+
+  router:
+    router_type: bottleneck
+    router_rank_size: 16
+  
+  q_proj:
+    estimated_sparsity: 0
+    pruning_type: null
+    backend: triton
+    prefill_impl: auto
+    decode_impl: auto
+    enable_autotune: false
+  
+  k_proj:
+    estimated_sparsity: 0
+    pruning_type: null
+    backend: triton
+    prefill_impl: auto
+    decode_impl: auto
+    enable_autotune: false
+  
+  v_proj:
+    estimated_sparsity: 0
+    pruning_type: null
+    backend: triton
+    prefill_impl: auto
+    decode_impl: auto
+    enable_autotune: false
+  
+  o_proj:
+    estimated_sparsity: 0
+    pruning_type: null
+    backend: triton
+    prefill_impl: auto
+    decode_impl: auto
+    enable_autotune: false
+
+mlp:
+  estimated_sparsity: -1
+  pruning_type: m
+  backend: triton
+  prefill_impl: auto
+  decode_impl: auto
+  enable_autotune: false
+
+  router:
+    router_type: bottleneck
+    router_rank_size: 16
+    router_order: diff
+
+  up_proj:
+    estimated_sparsity: 0
+    pruning_type: m
+    backend: triton
+    prefill_impl: auto
+    decode_impl: auto
+    enable_autotune: false
+  
+  gate_proj:
+    estimated_sparsity: 0
+    pruning_type: m
+    backend: triton
+    prefill_impl: auto
+    decode_impl: auto
+    enable_autotune: false
+  
+  down_proj:
+    estimated_sparsity: 0
+    pruning_type: m
+    backend: triton
+    prefill_impl: auto
+    decode_impl: auto
+    enable_autotune: false

@@ -1,0 +1,45 @@
+cache_type: base
+prune_embedding: false
+prune_lm_head: false
+residual_mapping: false
+
+layer:
+  estimated_sparsity: 0
+  pruning_type: none
+
+attention:
+  estimated_sparsity: -1
+  pruning_type: base
+  backend: tilelang
+  threshold: -1
+  enable_autotune: false
+
+self_attn:
+  estimated_sparsity: 0
+  offset: 0
+  pruning_type: none
+
+  q_proj:
+    estimated_sparsity: -1
+    offset: 0
+    pruning_type: N
+  
+  o_proj:
+    estimated_sparsity: -1
+    offset: 0
+    pruning_type: K
+
+mlp:
+  estimated_sparsity: 0
+  offset: 0
+  pruning_type: none
+
+  up_proj:
+    estimated_sparsity: -1
+    offset: 0
+    pruning_type: N
+  
+  down_proj:
+    estimated_sparsity: -1
+    offset: 0
+    pruning_type: K
