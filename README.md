@@ -13,5 +13,5 @@ LLM pruning aims to reduce the computational & memory cost of LLMs by removing, 
 
 | Work | Status | Code | Paper / Project | What it provides |
 |---|---|---|---|---|
-| **PruningInferSim** | Building | [`PruningInferSim/`](./PruningInferSim) | *From Theory to Practice: Benchmarking LLM Pruning Inference Acceleration under GEMM-Centric Taxonomy* | A pruning-wrapper and profiling framework for simulating TTFT/TPOT speedups under a GEMM-centric taxonomy. |
+| **PruningInferSim** | [arxiv](https://arxiv.org/abs/2606.09080) | [`PruningInferSim/`](./PruningInferSim) | *Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy* | A pruning-wrapper and profiling framework for simulating TTFT/TPOT speedups under a GEMM-centric taxonomy. |
 | More works | Coming soon | - | - | Future releases in the LLM pruning series. |
