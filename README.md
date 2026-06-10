@@ -14,4 +14,5 @@ LLM pruning aims to reduce the computational & memory cost of LLMs by removing, 
 | Work | Status | Code | Paper / Project | What it provides |
 |---|---|---|---|---|
 | **PruningInferSim** | [arxiv](https://arxiv.org/abs/2606.09080) | [`PruningInferSim/`](./PruningInferSim) | *Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy* | A pruning-wrapper and profiling framework for simulating TTFT/TPOT speedups under a GEMM-centric taxonomy. |
+| **InformedRouting** | [ICML2026](https://icml.cc/virtual/2026/poster/64064) | [`LFF/`](./LFF) | Bring Future Vision: Dynamic Computation Allocation Guided by Lightweight Feature Forecaster | Adding lightweight feature forecaster for Attn/FFN Module. |
 | More works | Coming soon | - | - | Future releases in the LLM pruning series. |

@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=1 nohup python main.py \
+    --per_device_train_batch_size 1 \
+    --regu_weight 0.1 \
+    --train_router_only \
+    --sparsity 0.25 \
+    --evaluation_strategy "steps" \
+    --eval_steps 200 \
+    --max_steps_stage 2000 \
+    --learning_rate 2e-3 \
+    --lr_scheduler_type "constant" \
+    --max_length 2048 \
+    --gradient_accumulation_steps 16 \
+    --post_norm_router \
+    --skipgpt > "hc_log/regularized_router.txt" 2>&1 &

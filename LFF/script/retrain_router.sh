@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=1 nohup python main.py \
+    --retrain_router \
+    --per_device_train_batch_size 1 \
+    --sparsity 0.25 \
+    --evaluation_strategy "steps" \
+    --eval_steps 200 \
+    --max_steps_stage 2000 \
+    --learning_rate 0 \
+    --lr_scheduler_type "constant" \
+    --max_length 2048 \
+    --gradient_accumulation_steps 16 \
+    --post_norm_router  > "hc_log/retrain_router.txt" 2>&1 &
