@@ -1,0 +1,5 @@
+recursive-include include *
+recursive-include 3rdparty *
+recursive-include csrc *
+recursive-include python *.py
+global-exclude __pycache__ *.py[cod]

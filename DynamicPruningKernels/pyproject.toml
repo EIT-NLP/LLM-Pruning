@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-pruning-kernels"
+version = "0.1.0"
+description = "Fused CUDA kernels and JIT autotuning for token-wise dynamic pruning"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "torch>=2.9",
+  "einops>=0.7",
+]
+
+[project.optional-dependencies]
+cute = [
+  "triton>=3.5",
+  "sglang>=0.5.8",
+  "apache-tvm-ffi>=0.1.9",
+]
+triton = ["triton>=3.5"]
+tilelang = ["tilelang>=0.1.11"]
+dev = [
+  "build>=1.2",
+  "pytest>=8",
+]
+
+[project.scripts]
+dynamic-pruning-kernels = "dynamic_width_jit.cli:main"
+dynamic-width-kernels = "dynamic_width_jit.cli:main"
+
+[tool.setuptools]
+include-package-data = true
